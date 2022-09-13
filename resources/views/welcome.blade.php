@@ -6,6 +6,7 @@
     <title>Firebase Auth: Google - TechFerment</title>
   </head>
   <body>
+    <a href="{{route('login')}}">Login</a>
     <h1>Welcome : Firebase Auth: Google</h1>
     <p>TechFerment: Firebase For Web</p>
 
@@ -69,6 +70,7 @@
 
       function checkAuthState(){
         firebase.auth().onAuthStateChanged(user=>{
+            console.log(user);
           if(user){
             document.getElementById('LoginScreen').style.display="none"
             document.getElementById('dashboard').style.display="block"
